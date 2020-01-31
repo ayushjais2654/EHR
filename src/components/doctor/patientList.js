@@ -10,12 +10,12 @@ class PatientList extends Component{
 
         };
     }
-    componentDidMount = async () => {
+    async componentDidMount() {
         let response = await axios.post(PATIENT_LIST, this.props.username);
         this.setState({
 
         });
-    };
+    }
     render(){
         return(
             <div>
@@ -23,7 +23,5 @@ class PatientList extends Component{
             </div>
         );
     }
-
 }
-
 export default PatientList;

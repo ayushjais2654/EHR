@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1cdcbd23-5bbd-49f2-88c0-f2b752db3ec0" name="Default Changelist" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/doctor/doctorLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/doctor/doctorRegister.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/globalConstants.js" afterDir="false" />
+    <list default="true" id="1aed811f-c7c9-4bb2-a15a-c9fa8493ba7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/patient/appointment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/patient/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/patient/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/patient/patientDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/doctor/aboutme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/aboutme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/doctor/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/doctor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/doctor/patientDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/patientDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/doctor/patientList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/patientList.js" afterDir="false" />
@@ -26,22 +25,9 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="ayush &lt;ayushjais2654@gmail.com&gt;" />
-      </list>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="b44a19a19cbdeb19a024c8a9d597bfff4d886aa6" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1X7TOnQfBK6AQqlYn81bjy1i4qd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -49,109 +35,56 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EHR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="npm.npm start">
-    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1cdcbd23-5bbd-49f2-88c0-f2b752db3ec0" name="Default Changelist" comment="" />
-      <created>1580396103827</created>
+      <changelist id="1aed811f-c7c9-4bb2-a15a-c9fa8493ba7c" name="Default Changelist" comment="" />
+      <created>1580461793413</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580396103827</updated>
-      <workItem from="1580396107791" duration="6866000" />
-      <workItem from="1580465487725" duration="786000" />
-      <workItem from="1580466310157" duration="4543000" />
+      <updated>1580461793413</updated>
+      <workItem from="1580461795893" duration="563000" />
+      <workItem from="1580462395238" duration="4946000" />
     </task>
-    <task id="LOCAL-00001" summary="Initial Commit">
-      <created>1580400550933</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1580400550933</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="248" y="27" width="859" height="741" key="CommitChangelistDialog2" timestamp="1580472998180">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1514" height="219" key="GridCell.Tab.0.bottom" timestamp="1580462872193">
+      <screen x="63" y="27" width="1537" height="873" />
     </state>
-    <state x="248" y="27" width="859" height="741" key="CommitChangelistDialog2/0.27.1366.741@0.27.1366.741" timestamp="1580472998180" />
-    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1580409105556">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1514" height="219" key="GridCell.Tab.0.bottom/63.27.1537.873@63.27.1537.873" timestamp="1580462872193" />
+    <state width="1514" height="219" key="GridCell.Tab.0.center" timestamp="1580462872193">
+      <screen x="63" y="27" width="1537" height="873" />
     </state>
-    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1580409105556" />
-    <state width="1343" height="172" key="GridCell.Tab.0.bottom" timestamp="1580397902614">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1514" height="219" key="GridCell.Tab.0.center/63.27.1537.873@63.27.1537.873" timestamp="1580462872193" />
+    <state width="1514" height="219" key="GridCell.Tab.0.left" timestamp="1580462872192">
+      <screen x="63" y="27" width="1537" height="873" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580397902614" />
-    <state width="1343" height="172" key="GridCell.Tab.0.center" timestamp="1580397902614">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1514" height="219" key="GridCell.Tab.0.left/63.27.1537.873@63.27.1537.873" timestamp="1580462872192" />
+    <state width="1514" height="219" key="GridCell.Tab.0.right" timestamp="1580462872193">
+      <screen x="63" y="27" width="1537" height="873" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580397902614" />
-    <state width="1343" height="172" key="GridCell.Tab.0.left" timestamp="1580397902613">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1514" height="219" key="GridCell.Tab.0.right/63.27.1537.873@63.27.1537.873" timestamp="1580462872193" />
+    <state x="426" y="198" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1580467929452">
+      <screen x="63" y="27" width="1537" height="873" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580397902613" />
-    <state width="1343" height="172" key="GridCell.Tab.0.right" timestamp="1580397902614">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="426" y="198" width="800" height="528" key="Vcs.Push.Dialog.v2/63.27.1537.873@63.27.1537.873" timestamp="1580467929452" />
+    <state x="495" y="208" key="run.anything.popup" timestamp="1580463562617">
+      <screen x="63" y="27" width="1537" height="873" />
     </state>
-    <state width="1343" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580397902614" />
-    <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1580408931947">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="278" y="133" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.741@0.27.1366.741" timestamp="1580408931947" />
-    <state x="453" y="317" width="450" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580472943087">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="453" y="317" width="450" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1580472943087" />
-    <state x="347" y="174" key="run.anything.popup" timestamp="1580397069436">
-      <screen x="0" y="27" width="1366" height="741" />
-    </state>
-    <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1580397069436" />
+    <state x="495" y="208" key="run.anything.popup/63.27.1537.873@63.27.1537.873" timestamp="1580463562617" />
   </component>
 </project>

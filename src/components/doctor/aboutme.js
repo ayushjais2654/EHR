@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {ABOUT_ME} from './constants';
+import {ABOUT_ME}from './constants';
 
 
 class AboutMe extends Component{
@@ -10,12 +10,12 @@ class AboutMe extends Component{
 
         };
     }
-    componentDidMount = async () => {
+    async componentDidMount() {
         let response = await axios.post(ABOUT_ME, this.props.username);
         this.setState({
 
         });
-    };
+    }
     render(){
         return(
             <div>
@@ -23,7 +23,5 @@ class AboutMe extends Component{
             </div>
         );
     }
-
 }
-
 export default AboutMe;
