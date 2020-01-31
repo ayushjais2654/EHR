@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import PATIENT_DETAILS from './constants';
+import {PATIENT_DETAILS} from './constants';
 
 class PatientList extends Component{
     constructor(props) {
@@ -10,12 +10,12 @@ class PatientList extends Component{
 
         };
     }
-    async componentDidMount() {
+    componentDidMount = async () => {
         let response = await axios.post(PATIENT_DETAILS, this.props.patientId);
         this.setState({
 
         });
-    }
+    };
     render(){
         return(
             <div>
@@ -23,5 +23,5 @@ class PatientList extends Component{
             </div>
         );
     }
-
 }
+export default PatientList;
