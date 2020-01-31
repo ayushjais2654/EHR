@@ -822,6 +822,11 @@ td {
                 $("#" + elementID).unblock();
             });
         };
+         $(document).ready(function () {
+            $('#table_id').DataTable( {
+                "order": [[ 1, "desc" ]]
+            } );
+        });
     </script>
 </head>
 <body>
@@ -925,21 +930,80 @@ td {
             <section class="panel important">
                 <h2> AVAILABLE DOCTORS </h2>
                 <div id="dvGridCandidate" style="padding: 10px; width: 450px">
-                    
+                
             </section>
         </div>
 
-        <div id="allDocs">
+        <div id="allDocs" runat="server">
+          
             <section class="panel important">
-                <h2> OUR DOCTORS </h2>
-                <div id="dvGridCandidate" style="padding: 10px; width: 450px">
-                    
-                   
-                </div>
+                <h2>ALL DOCTORS</h2>
+
+                <table id="table_id" class="display" >
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>Row 2 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Row 2 Data 1</td>
+                            <td>shi 2 Data 2</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </div>
-
       </main>
     </form>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script> 
   </body>
 </html>  
