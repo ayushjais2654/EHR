@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import ABOUT_ME from './constants';
+import {ABOUT_ME}from './constants';
 
 
 class AboutMe extends Component{
@@ -23,5 +23,5 @@ class AboutMe extends Component{
             </div>
         );
     }
-
 }
+export default AboutMe;

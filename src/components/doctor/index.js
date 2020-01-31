@@ -5,11 +5,6 @@ import AboutMe from './aboutme';
 import PatientList from './patientList';
 import PatientDetails from './patientDetails';
 
-/**
- *  @author : Ayush Jaiswal
- *  @Date : 19/12/2019
- */
-
 class DoctorLayout extends Component {
     constructor(props) {
         super(props);
@@ -25,10 +20,16 @@ class DoctorLayout extends Component {
         });
     };
 
+    handleAboutMeClick = () => {
+        this.setState({
+            isAboutMe : true
+        });
+    };
+
     render(){
         return(
           <div>
-              <button>
+              <button onClick={this.handleAboutMeClick}>
                   About Me
               </button>
               {this.isAboutMeClicked ? <AboutMe username = {this.props.username}/> : null}

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import PATIENT_DETAILS from './constants';
+import {PATIENT_DETAILS} from './constants';
 
-class PatientList extends Component{
+class PatientDetails extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -23,5 +23,5 @@ class PatientList extends Component{
             </div>
         );
     }
-
 }
+export default PatientDetails;

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import PATIENT_LIST from './constants';
+import {PATIENT_LIST} from './constants';
 
 class PatientList extends Component{
     constructor(props) {
@@ -23,5 +23,5 @@ class PatientList extends Component{
             </div>
         );
     }
-
 }
+export default PatientList;
