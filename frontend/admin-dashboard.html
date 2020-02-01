@@ -4,6 +4,11 @@
 <head runat="server">
     <title></title>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
     <style>
         @charset "UTF-8";
         @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic);
@@ -142,7 +147,11 @@
 
                 .dropdown > input[type="checkbox"]:checked ~ .dropdown-menu {
                     max-height: 9999px;
+                    width: 95%;
                     display: block;
+                    left: 19px;
+                    text-align: center;
+                    background: #ff000036;
                     -moz-transform: scaleY(1);
                     -ms-transform: scaleY(1);
                     -webkit-transform: scaleY(1);
@@ -1148,6 +1157,24 @@
             padding-bottom: 10px;
             position: relative;
         }
+        #abc {
+            width:100%;
+            height:100%;
+            opacity:0.9;
+            top:0;
+            left:0;
+            position:fixed;
+            background-color: rgba(240, 240, 240, .9);
+            overflow:auto;
+            display: none;
+        }
+        #popupContact {
+            width : 600px;
+            left:30%;
+            top:100px;
+            position: absolute;
+            font-family:'Raleway',sans-serif;
+        }
     </style>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/jquery.blockUI.js"></script>
@@ -1196,7 +1223,7 @@
                 <li class="dashboard"><a href="#dashboard">Dashboard</a></li>
                 <li class="write"><a href="#newDoctors">New Doctors</a></li>
                 <li class="write"><a href="#newPatients">New Patients</a></li>
-                <li class="write"><a href="#allDocs">Available Doctors</a></li>
+                <li class="write"><a href="#availableDocs">Available Doctors</a></li>
                 <li class="write"><a href="#allDocs">All Doctors</a></li>
             </ul>
         </nav>
@@ -1404,7 +1431,7 @@
                 </section>
             </div>
 
-            <div id="allDocs" runat="server">
+            <div id="allDocs">
 
                 <section class="panel important">
                     <h2>ALL DOCTORS</h2>
@@ -1417,61 +1444,41 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr data-toggle="modal" data-target="#abc">
                                 <td>Row 1 Data 1</td>
                                 <td>Row 1 Data 2</td>
                             </tr>
-                            <tr>
+                            <tr data-toggle="modal" data-target="#abc">
                                 <td>Row 2 Data 1</td>
                                 <td>Row 2 Data 2</td>
                             </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>Row 2 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>Row 2 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>Row 2 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>Row 2 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>shi 2 Data 2</td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </section>
             </div>
+            <div class="modal fade" id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
+              <div class="modal-dialog" id = "popupContact">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title" id="myModalLabel">DOCTOR DETAILS</h1>
+                  </div>
+                  <div class="modal-body">
+                    <div class="col s4">Description : </div>
+                    <div class="input-field col s8">
+                      some random details
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger text-white" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
         </main>
     </form>
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
