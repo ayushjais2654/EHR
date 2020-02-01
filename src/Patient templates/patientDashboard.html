@@ -4,7 +4,8 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
-
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8"
             src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
     <style>
@@ -485,6 +486,58 @@
             .panel.secondary {
                 width: 23%;
             }
+
+            .modal-content {
+                position: relative;
+                background-color: #fff;
+                -webkit-background-clip: padding-box;
+                background-clip: padding-box;
+                border: 1px solid #999;
+                border: 1px solid rgba(0, 0, 0, .2);
+                border-radius: 0;
+                outline: 0;
+                -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+                box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            }
+            #myModal--specialPromo.modal.fade .modal-dialog {
+                -webkit-animation: specialPromo 1s 1 ease-in-out;
+                -moz-animation: specialPromo 1s 1 ease-in-out;
+                -o-animation: specialPromo 1s 1 ease-in-out;
+            }
+
+            #myModal--slideSpeedRight.modal.fade.in .modal-dialog {
+                -webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+                -moz-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+                -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+            }
+
+            @-webkit-keyframes specialPromo {
+                from {
+                    -webkit-transform: rotate(172deg) scale(0.46) skew(1deg) translate(0px);
+                }
+                to {
+                    -webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+                }
+            }
+
+            @-moz-keyframes specialPromo {
+                from {
+                    -moz-transform: rotate(172deg) scale(0.46) skew(1deg) translate(0px);
+                }
+                to {
+                    -moz-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+                }
+            }
+
+            @-o-keyframes specialPromo {
+                from {
+                    -o-transform: rotate(172deg) scale(0.46) skew(1deg) translate(0px);
+                }
+                to {
+                    -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px);
+                }
+            }
+
         }
     </style>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -537,63 +590,39 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
+                    <tr  data-toggle="modal" data-target="#myModal--specialPromo">
                         <td>Row 1 Data 1</td>
                         <td>Row 1 Data 2</td>
                         <td>Row 1 Data 3</td>
                     </tr>
-                    <tr>
-                        <td>Row 2 Data 1</td>
-                        <td>Row 2 Data 2</td>
-                        <td>Row 2 Data 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2 Data 1</td>
-                        <td>Row 2 Data 2</td>
-                        <td>Row 2 Data 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2 Data 1</td>
-                        <td>Row 2 Data 2</td>
-                        <td>Row 2 Data 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2 Data 1</td>
-                        <td>Row 2 Data 2</td>
-                        <td>Row 2 Data 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 3</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2 Data 1</td>
-                        <td>Row 2 Data 2</td>
-                        <td>Row 2 Data 3</td>
-                    </tr>
+                    <div class="modal fade  " id="myModal--specialPromo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-titles" id="myModalLabel">DETAILED REPORT</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div style="text-align: center;"><i class="fa fa fa-file-text-o fa-5x"></i></div>
+
+                                    <div class="jumbotron jumbotron-fluid">
+                                        <p>enter report description here</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </tbody>
                 </table>
             </section>
         </div>
     </main>
 </form>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
