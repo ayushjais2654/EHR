@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import AboutMe from "../doctor/aboutme";
-import PatientDetails from "./patientDetails";
+import $ from 'jquery';
 import './PatientLayoutCss.css';
 
 class PatientLayout extends Component {
@@ -21,18 +20,12 @@ class PatientLayout extends Component {
     handleNewAppointmentClicked  = () => {
 
     };
+    componentDidMount() {
+    }
 
     render(){
         return (
           <div>
-              <button onClick = {this.handleAboutMeClicked}>
-                  fndsknk
-              </button>
-              {this.state.isAboutMeClicked ? <AboutMe username = {this.props.username} /> : null }
-              <button onClick = {this.handleNewAppointmentClicked}>
-                  New Appointment
-              </button>
-              <PatientDetails patientId = {this.props.username}/>
               <form id="form1" runat="server">
                   <header role="banner">
                       <h1>Patient Panel</h1>
@@ -63,7 +56,7 @@ class PatientLayout extends Component {
                               <h2>PREVIOUS REPORTS</h2>
 
                               <table id="table_id" className="display">
-                              <thead>
+                                  <thead>
                                   <tr>
                                       <th>Report ID</th>
                                       <th>Doctor</th>
@@ -127,7 +120,6 @@ class PatientLayout extends Component {
                       </div>
                   </main>
               </form>
-
           </div>
         );
     }
