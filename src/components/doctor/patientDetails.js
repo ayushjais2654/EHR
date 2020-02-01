@@ -10,12 +10,12 @@ class PatientDetails extends Component{
 
         };
     }
-    async componentDidMount() {
+    componentDidMount = async () => {
         let response = await axios.post(PATIENT_DETAILS, this.props.patientId);
         this.setState({
 
         });
-    }
+    };
     render(){
         return(
             <div>

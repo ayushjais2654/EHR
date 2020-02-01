@@ -36,3 +36,5 @@ class PatientLayout extends Component {
         );
     }
 }
+
+export default PatientLayout;

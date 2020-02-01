@@ -1,15 +1,11 @@
 import React, {Component} from 'react';
-import axios from 'axios';
-import {DOCTOR_LOGIN_API} from './constants';
-import DoctorLayout from "./index";
-import {TOKEN_DOCTOR} from "../globalConstants";
+import {TOKEN_PATIENT} from "../globalConstants";
+import PatientLayout from "./index";
 
-class DoctorLogin extends Component {
-
+class PatientLogin extends Component {
     constructor(props) {
         super(props);
-
-        const token = localStorage.getItem(TOKEN_DOCTOR);
+        const token = localStorage.getItem(TOKEN_PATIENT);
         let loggedIn = true;
         if (token === null) {
             loggedIn = false;
@@ -30,34 +26,33 @@ class DoctorLogin extends Component {
 
     submitForm = async (event) => {
         event.preventDefault();
-        const doctorCredentials = {
+        const patientCredentials = {
             username: this.state.username,
             password: this.state.password
         };
 
-       // Verification of credentials from composer
+        // Verification of credentials from composer
 
-        if(true) {
-            localStorage.setItem(TOKEN_DOCTOR, "hredgjkljggdfr");
+        if (true) {
+            localStorage.setItem(TOKEN_PATIENT, "hredgjkljggdfr");
             this.setState({loggedIn: true});
-        }
-        else{
+        } else {
             alert("Invalid credentials");
         }
     };
 
-
-
     render() {
         if (this.state.loggedIn === true) {
-            return <DoctorLayout username={this.state.username} />;
+            return <PatientLayout username={this.state.username}/>;
         }
 
         return (
             <div>
                 <form onSubmit={this.submitForm}>
-                    Username : <input type="text" name = "username" value = {this.state.username} onChange={this.handleChange} required /> <br/><br/>
-                    Password : <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required/> <br/> <br/>
+                    Username : <input type="text" name="username" value={this.state.username}
+                                      onChange={this.handleChange} required/> <br/><br/>
+                    Password : <input type="password" name="password" value={this.state.password}
+                                      onChange={this.handleChange} required/> <br/> <br/>
                     <input type="submit" value="Submit"/>
                 </form>
             </div>
@@ -65,4 +60,4 @@ class DoctorLogin extends Component {
     }
 }
 
-export default DoctorLogin;
+export default PatientLogin;

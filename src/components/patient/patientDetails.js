@@ -9,7 +9,7 @@ class PatientDetails extends Component {
             latestDoctorAllocated : null
         };
     }
-    async componentDidMount() {
+    componentDidMount = async () => {
         try {
             setInterval(async () => {
                 const res = await axios.post(PATIENT_DETAILS, this.props.patientId);
@@ -20,7 +20,7 @@ class PatientDetails extends Component {
         } catch(e) {
             console.log(e);
         }
-    }
+    };
     render(){
         return(
             <div>
