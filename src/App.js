@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Home from "./components/Home";
+import DoctorLogin from "./components/doctor/doctorLogin";
+import PatientLogin from "./components/patient/patientLogin";
+import PatientLayout from "./components/patient";
+import PatientRegister from "./components/patient/patientRegister";
+import DoctorLayout from "./components/doctor";
+import DoctorRegister from "./components/doctor/doctorRegister";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+          <Route path="/" exact component={Home}/>
+          <Route path="/doctorLogin" exact component={DoctorLogin}/>
+          <Route path="/doctorLayout" exact component={DoctorLayout}/>
+          <Route path="/doctorRegister" exact component={DoctorRegister}/>
+
+          <Route path="/PatientLogin" exact component={PatientLogin}/>
+          <Route path="/patientHome" exact component={PatientLayout}/>
+          <Route path="/patientRegister" exact component={PatientRegister}/>
+
+          {/*<Route path="/hospitalRegister" exact component={HospitalRegister}/>*/}
+          {/*<Route path="/hospitalLogin" exact component={HospitalLogin}/>*/}
+          {/*<Route path="/hospitalLayout" exact component={HospitalLayout}/>*/}
+
+      </Router>
     </div>
   );
 }

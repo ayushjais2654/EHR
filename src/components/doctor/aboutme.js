@@ -10,16 +10,16 @@ class AboutMe extends Component{
 
         };
     }
-    async componentDidMount() {
+    componentDidMount = async () => {
         let response = await axios.post(ABOUT_ME, this.props.username);
         this.setState({
 
         });
-    }
+    };
     render(){
         return(
             <div>
-
+                    <h1> Hello world ... </h1>
             </div>
         );
     }

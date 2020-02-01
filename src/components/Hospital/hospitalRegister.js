@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import Home from "../Home";
-import {DOCTOR_REGISTER_API} from "./constants";
+import axios from "axios";
+import {HOSPITAL_REGISTER_API} from "./constants";
 
-
-class DoctorRegister extends Component {
-
+class HospitalRegister extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,23 +12,6 @@ class DoctorRegister extends Component {
              */
             isRegistered : false
         }
-    }
-
-    render() {
-
-        if(this.state.isRegistered === true){
-            return <Home/>;
-        }
-        return (
-            <div>
-                <h1> Welcome to Doctor Registration Page .. </h1>
-                <form onSubmit={this.submitForm}>
-
-
-                    <input type="submit" value="Submit"/>
-                </form>
-            </div>
-        );
     }
 
     handleChange = (event) => {
@@ -43,23 +24,39 @@ class DoctorRegister extends Component {
     submitForm = async (event) => {
 
         // event.preventDefault();
-       /*
-            Basic Validation
-        */
+        /*
+             Basic Validation
+         */
 
-       /*
-            Register in blockchain using api.
-        */
-        let response = await axios.post(DOCTOR_REGISTER_API, this.state);
+        /*
+             Register in blockchain using api.
+         */
+        let response = await axios.post(HOSPITAL_REGISTER_API, this.state);
         alert(response.data);
         if(response.data === "Candidate is successfully registered .."){
             this.setState({
                 isRegistered : true
             });
         }
+    };
+
+    render() {
+        if(this.state.isRegistered === true){
+            return <Home/>;
+        }
+
+        return (
+            <div>
+                <h1> Welcome to Hospital Registration Page .. </h1>
+                <form onSubmit={this.submitForm}>
+
+
+                    <input type="submit" value="Submit"/>
+                </form>
+            </div>
+        );
     }
 }
-
 function validateName(name) {
 
     let valid = true;
@@ -81,5 +78,4 @@ function validateMobileNo(number) {
     }
     return valid;
 }
-
-export default DoctorRegister;
+export default HospitalRegister;
