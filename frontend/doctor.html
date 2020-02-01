@@ -4,6 +4,13 @@
 <head runat="server">
     <title></title>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
     <style>
         @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic);
@@ -128,7 +135,11 @@ body {
 }
 .dropdown > input[type="checkbox"]:checked ~ .dropdown-menu {
   max-height: 9999px;
-  display: block;
+    width: 95%;
+    display: block;
+    left: 19px;
+    text-align: center;
+    background: #ff000036;
   -moz-transform: scaleY(1);
   -ms-transform: scaleY(1);
   -webkit-transform: scaleY(1);
@@ -1066,8 +1077,12 @@ font-family:'Raleway',sans-serif;
                                 <div class = "inside-dropdown" style = "padding: 20px; position: relative;">
                                   <div class = "element">Hello world</div>
                                   <div class = "element">Hello world</div>
-                                  <div class = "element">Hello world</div>
-                                  <input type="submit" name="buttonupdatev" class="btn btn-primary text-white" value="Add Report" onclick="callPopup()" onmouseleave="callPopup()" style = "width:170px; height: 50px; font-size: 15px;text-align: center;"/>
+                                  <div class = "element">Hello world</div>        
+                                    <div class="row mb-4">
+                                      <div class="col text-center">
+                                        <a href="#" class="btn btn-danger text-white" data-toggle="modal" data-target="#abc">Add Report</a>
+                                      </div>
+                                    </div>
 
                                 </div>
                               </ul>
@@ -1079,25 +1094,32 @@ font-family:'Raleway',sans-serif;
             </section>
         </div>
 
-        <div id="abc">
-          <div id="popupContact">
-            <header>
-              <h1>
-              REPORT
-            </h1>
-            </header>
-          <div class="row">
-              <div class="col s4">Description : </div>
+        <div class="modal fade" id="abc" tabindex="-1" role="dialog" aria-labelledby="abc" aria-hidden="true">
+          <div class="modal-dialog" id = "popupContact">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="myModalLabel">REPORT</h1>
+              </div>
+              <div class="modal-body">
+                <div class="col s4">Description : </div>
                 <div class="input-field col s8">
-                  <textarea id="description" type="name" class="description" name="diseaseDescription" style = "width: 500px; height: 100px; ">
+                  <textarea id="description" type="name" class="description" value = "" name="diseaseDescription" style = "width: 500px; height: 100px; ">
                   </textarea>
                 </div>
-                <input type="submit" name="buttonupdatev" class="btn btn-primary text-white" value="ok" style="height: 30px; width: 30px; font-size: 10px; padding-left: 15px;" />
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger text-white" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
         </div>
         
 
       </main>
     </form>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   </body>
 </html>  
