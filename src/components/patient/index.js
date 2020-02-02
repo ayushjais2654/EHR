@@ -71,9 +71,9 @@ class PatientLayout extends Component {
 
     render(){
 
-        // if(this.state.loggedIn === false){
-        //     return <Redirect to='/'/>;
-        // }
+        if(this.state.loggedIn === false){
+            return <Redirect to='/'/>;
+        }
 
         return (
             <div>
@@ -90,6 +90,7 @@ class PatientLayout extends Component {
                             <br/>
                             <li className="write"><a href="#appintmentForm">New Appointment</a></li>
                             <br/>
+                            <button className="dashboard" onClick={this.signOut}>SignOut</button>
                         </ul>
                     </nav>
 

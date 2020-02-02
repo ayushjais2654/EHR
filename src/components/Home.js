@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import {TOKEN_DOCTOR, TOKEN_HOSPITAL, TOKEN_PATIENT} from "./globalConstants";
 import {Link} from "react-router-dom";
 import './Home.css';
-import DoctorLogin from "./doctor/doctorLogin";
-import PatientLayout from "./patient";
+import {Redirect} from 'react-router-dom';
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -50,10 +49,10 @@ class Home extends Component {
                             <div class="right">
                                 <nav id = "homeNav">
                                     <ul>
-                                        <li id="homeNav1"><a href="">Home</a></li> <br/>
-                                        <li id="homeNav2"><a href="">Patient</a></li>
-                                        <li id="homeNav3"><a href="">Doctor</a></li>
-                                        <li id="homeNav4"><a href="">Hospital</a></li>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/patientLogin">Patient</a></li>
+                                        <li><a href="/doctorLogin">Doctor</a></li>
+                                        <li><a href="/hospitalLogin">Hospital</a></li>
                                     </ul>
                                 </nav>
                             </div>
