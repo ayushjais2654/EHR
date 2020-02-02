@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-
 import AboutMe from './aboutme';
 import PatientList from './patientList';
 import PatientDetails from './patientDetails';

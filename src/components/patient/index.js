@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import $ from 'jquery';
 import './PatientLayoutCss.css';
 import {Button} from "react-bootstrap";
 import {TOKEN_PATIENT} from "../globalConstants";
