@@ -15,7 +15,7 @@ function App() {
       <Router>
           <Route path="/" exact component={Home}/>
           <Route path="/doctorLogin" exact component={DoctorLogin}/>
-          <Route path="/doctorLayout" exact component={DoctorLayout}/>
+          <Route path="/doctorHome" exact component={DoctorLayout}/>
           <Route path="/doctorRegister" exact component={DoctorRegister}/>
 
           <Route path="/PatientLogin" exact component={PatientLogin}/>

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Home from "../Home";
 import './patientRegister.css';
 import axios from "axios";
-import {PATIENT_REGISTER_API} from "./constants";
+import {Redirect} from "react-router-dom";
 
 class PatientRegister extends Component {
     constructor(props) {
@@ -11,8 +11,16 @@ class PatientRegister extends Component {
             /*
                 attributed of doctor
              */
+            name : "fjifb",
+            emailId : "jhfsfdfjsfnj",
+            password : "fewmklfmewf",
+            pinCode : "sdnkn",
+            street : "fkgner",
+            country : "frnfkrge",
+            bloodGroup : "fenfkjer",
+            mobNo : "916151",
             isRegistered : false
-        }
+        };
     }
 
     handleChange = (event) => {
@@ -24,32 +32,43 @@ class PatientRegister extends Component {
 
     submitForm = async (event) => {
 
-        // event.preventDefault();
-        /*
-             Basic Validation
-         */
-
+        event.preventDefault();
+        const patientDetails = {
+            "$class": "org.electronic.healthcare.AddNewPatient",
+            "emailId": this.state.emailId,
+            "name": this.state.name,
+            "password": this.state.password,
+            "address": {
+                "$class": "org.electronic.healthcare.IndiaAddress",
+                "pincode": this.state.pinCode,
+                "street": this.state.street,
+                "city": this.state.city,
+                "country": this.state.country
+            },
+            "bloodGroup": this.state.bloodGroup,
+            "contactNumber": this.state.mobNo
+        };
         /*
              Register in blockchain using api.
          */
-        this.setState({
-            isRegistered: true
+        let response  = await axios.post(`http://localhost:3001/api/AddNewPatient`, patientDetails).then(null , error => {
+            console.log(error.response.status);
+            if(error.response.status === 500){
+                alert("Patient already registered! Email already exists");
+            }
         });
 
-       
-        let response = await axios.post(PATIENT_REGISTER_API, this.state);
-
-      
-        if(response.data === "Candidate is successfully registered .."){
+        if(response !== undefined) {
+            alert("You are successfully registered");
             this.setState({
-                isRegistered : true
+                isRegistered: true
             });
         }
     };
 
     render() {
         if(this.state.isRegistered === true){
-            return <Home/>;
+            return <Redirect to='/'/>;
         }
 
         return (
@@ -59,7 +78,7 @@ class PatientRegister extends Component {
                         <h1>REGISTER</h1>
                         <div class="main-agileinfo">
                             <div class="agileits-top">
-                                <form onSubmit={this.submitForm}>
+                                <form onSubmit={this.submitForm} id = "patientRegisterForm">
                                     NAME : <input class="text" type="text" name="username" placeholder="Username" />
                                     EMAIL : <input class="text" type="email" name="email" placeholder="EMail" />
                                     PASSWORD : <input class="text" type="password" name="password" placeholder="Password" />
