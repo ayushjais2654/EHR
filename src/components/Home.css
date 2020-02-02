@@ -125,7 +125,7 @@ header {
     display: none;
 }
 
-nav ul {
+#homeNav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -135,15 +135,15 @@ nav ul {
     flex-direction: row;
 }
 
-    nav ul li {
+    #homeNav ul li {
         margin-right: 10px;
     }
 
-        nav ul li:last-child {
+        #homeNav ul li:last-child {
             margin-right: 0;
         }
 
-        nav ul li a {
+        #homeNav ul li a {
             position: relative;
             padding: 0 20px;
             height: 40px;
@@ -163,7 +163,7 @@ nav ul {
             text-transform: uppercase;
         }
 
-            nav ul li a::after {
+            #homeNav ul li a::after {
                 position: absolute;
                 z-index: -1;
                 content: '';
@@ -183,7 +183,7 @@ nav ul {
                 transform-origin: bottom left;
             }
 
-            nav ul li a:hover::after {
+            #homeNav ul li a:hover::after {
                 left: 0;
                 width: 150%;
             }
@@ -326,7 +326,7 @@ nav ul {
         flex-direction: column;
     }
 
-    nav ul {
+    #homeNav ul {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -336,11 +336,11 @@ nav ul {
         align-items: center;
     }
 
-        nav ul li {
+        #homeNav ul li {
             margin: 0;
         }
 
-            nav ul li a {
+            #homeNav ul li a {
                 font-size: 22px;
                 height: 60px;
                 line-height: 60px;
@@ -349,7 +349,7 @@ nav ul {
                 overflow: visible;
             }
 
-                nav ul li a::before {
+                #homeNav ul li a::before {
                     content: '';
                     text-align: center;
                     position: absolute;
@@ -367,36 +367,36 @@ nav ul {
                     transition: .3s all ease-in-out;
                 }
 
-            nav ul li:hover:nth-child(1) a::before {
+            #homeNav ul li:hover:nth-child(1) a::before {
                 content: 'HOME';
                 font-size: 100px;
             }
 
-            nav ul li:hover:nth-child(2) a::before {
+            #homeNav ul li:hover:nth-child(2) a::before {
                 content: 'SERVICES';
                 font-size: 100px;
             }
 
-            nav ul li:hover:nth-child(3) a::before {
+            #homeNav ul li:hover:nth-child(3) a::before {
                 content: 'ABOUT';
                 font-size: 100px;
             }
 
-            nav ul li:hover:nth-child(4) a::before {
+            #homeNav ul li:hover:nth-child(4) a::before {
                 content: 'PORTFOLIO';
                 font-size: 100px;
             }
 
-            nav ul li:hover:nth-child(5) a::before {
+            #homeNav ul li:hover:nth-child(5) a::before {
                 content: 'CONTACT';
                 font-size: 100px;
             }
 
-            nav ul li a:hover {
+            #homeNav ul li a:hover {
                 color: transparent;
             }
 
-            nav ul li a::after {
+            #homeNav ul li a::after {
                 display: none;
             }
 
