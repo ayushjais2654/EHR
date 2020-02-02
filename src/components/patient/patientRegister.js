@@ -79,13 +79,14 @@ class PatientRegister extends Component {
                         <div class="main-agileinfo">
                             <div class="agileits-top">
                                 <form onSubmit={this.submitForm} id = "patientRegisterForm">
-                                    NAME : <input class="text" type="text" name="username" placeholder="Username" />
-                                    EMAIL : <input class="text" type="email" name="email" placeholder="EMail" />
-                                    PASSWORD : <input class="text" type="password" name="password" placeholder="Password" />
-                                    PIN CODE : <input class="text" type="text" name="street" placeholder="Street" />
-                                    COUNTRY : <input class="text" type="text" name="country" placeholder="Country" />
-                                    BLOOD GROUP : <input class="text" type="text" name="bloodGroup" placeholder="blood group" />
-                                    MOBILE NUMBER : <input class="text" type="text" name="mobNo" placeholder="Mobile Number" />
+                                    NAME : <input class="text" type="text" name="name" placeholder="Username" onChange={this.handleChange}/>
+                                    EMAIL : <input class="text" type="email" name="emailId" placeholder="EMail" onChange={this.handleChange}/>
+                                    PASSWORD : <input class="text" type="password" name="password" placeholder="Password" onChange={this.handleChange}/>
+                                    PIN CODE : <input class="text" type="text" name="pinCode" placeholder="pinCode" onChange={this.handleChange} />
+                                    COUNTRY : <input class="text" type="text" name="country" placeholder="Country" onChange={this.handleChange}/>
+                                    STREET : <input class="text" type="text" name="street" placeholder="Street" onChange={this.handleChange}/>
+                                    BLOOD GROUP : <input class="text" type="text" name="bloodGroup" placeholder="blood group" onChange={this.handleChange}/>
+                                    MOBILE NUMBER : <input class="text" type="text" name="mobNo" placeholder="Mobile Number" onChange={this.handleChange}/>
                                     <div class="wthree-text">
                                         <label class="anim">
                                             <input type="checkbox" class="checkbox" />
