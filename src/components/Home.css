@@ -412,3 +412,28 @@ header {
         transition-delay: .5s;
     }
 }
+
+#homeNav1 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: wheat;
+}
+#homeNav2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: wheat;
+}
+#homeNav3 {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    color: wheat;
+}
+#homeNav4 {
+    position: absolute;
+    top: 40%;
+    left:70%;
+    color: wheat;
+}

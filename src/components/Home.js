@@ -50,10 +50,10 @@ class Home extends Component {
                             <div class="right">
                                 <nav id = "homeNav">
                                     <ul>
-                                        <li><a href="">Home</a></li>
-                                        <li><a href="">Patient</a></li>
-                                        <li><a href="">Doctor</a></li>
-                                        <li><a href="">Hospital</a></li>
+                                        <li id="homeNav1"><a href="">Home</a></li> <br/>
+                                        <li id="homeNav2"><a href="">Patient</a></li>
+                                        <li id="homeNav3"><a href="">Doctor</a></li>
+                                        <li id="homeNav4"><a href="">Hospital</a></li>
                                     </ul>
                                 </nav>
                             </div>
