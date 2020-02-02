@@ -86,15 +86,15 @@ class PatientLogin extends Component {
                         <h2>Welcome back,</h2>
                         <label>
                             <span>Email</span>
-                            <input id="patientLogin" type="email"/>
+                            <input id="patientLogin" type="email" onChange={this.handleChange} name="username"/>
                         </label><br/>
                         <label>
                             <span>Password</span>
-                            <input id="patientLogin" type="password"/>
+                            <input id="patientLogin" type="password" onChange={this.handleChange} name="password"/>
                         </label><br/><br/>
-                        <button type="submit" class="btn btn-danger text-white" onClick="">Sign In</button>
+                        <button type="submit" className="btn btn-danger text-white" onClick={this.submitForm}>Sign In</button>
                         <br/><br/>
-                        <button type="submit" class="btn btn-danger text-white" onClick="">Sign Up</button>
+                        <button type="submit" className="btn btn-danger text-white" href='/patientRegister'> Sign Up</button>
                     </div>
                     <div className="sub-cont">
                         <div className="img">
