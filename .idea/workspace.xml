@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1cdcbd23-5bbd-49f2-88c0-f2b752db3ec0" name="Default Changelist" comment="">
+    <list default="true" id="1cdcbd23-5bbd-49f2-88c0-f2b752db3ec0" name="Default Changelist" comment="doctor index.js">
+      <change afterPath="$PROJECT_DIR$/src/components/Pharmacy/aboutme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pharmacy/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pharmacy/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pharmacy/pharmacyLogin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pharmacy/pharmacyRegister.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/patient/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/patient/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/patient/patientLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/patient/patientLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/doctor/doctorLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/doctorLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/doctor/doctorRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/doctorRegister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/globalConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/globalConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/patient/patientRegister.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/patient/patientRegister.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,9 +237,14 @@
     </state>
     <state x="453" y="317" width="460" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.741@0.27.1366.741" timestamp="1580559690086" />
     <state x="486" y="315" width="454" height="168" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/49.24.1317.744@49.24.1317.744" timestamp="1580641072554" />
-    <state x="347" y="174" key="run.anything.popup" timestamp="1580397069436">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="453" y="200" key="run.anything.popup" timestamp="1580642491029">
+      <screen x="63" y="27" width="1537" height="873" />
     </state>
     <state x="347" y="174" key="run.anything.popup/0.27.1366.741@0.27.1366.741" timestamp="1580397069436" />
+    <state x="453" y="200" key="run.anything.popup/63.27.1537.873@63.27.1537.873" timestamp="1580642491029" />
+    <state x="494" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1580642844010">
+      <screen x="63" y="27" width="1537" height="873" />
+    </state>
+    <state x="494" y="212" width="672" height="678" key="search.everywhere.popup/63.27.1537.873@63.27.1537.873" timestamp="1580642844010" />
   </component>
 </project>

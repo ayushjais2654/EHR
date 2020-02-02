@@ -31,56 +31,55 @@ class DoctorLogin extends Component {
 
     submitForm = async (event) => {
         event.preventDefault();
-        const doctorCredentials = {
-            username: this.state.username,
-            password: this.state.password
-        };
 
-       // Verification of credentials from composer
-
-        if(true) {
-            localStorage.setItem(TOKEN_DOCTOR, "hredgjkljggdfr");
-            this.setState({loggedIn: true});
+        let response = await axios.get(`http://localhost:3001/api/Doctor/${this.state.username}`);
+        if (response === undefined) {
+            alert("Invalid Credentials");
+        } else {
+            if (this.state.password === response.data.password) {
+                localStorage.setItem(TOKEN_DOCTOR, "hredgjkljggdfr");
+                this.setState({loggedIn: true});
+            } else {
+                alert("Invalid Credentials");
+            }
         }
-        else{
-            alert("Invalid credentials");
-        }
-    };
+        ;
 
 
+        render()
+        {
+            if (this.state.loggedIn === true) {
+                return <DoctorLayout username={this.state.username}/>;
+            }
 
-    render() {
-        if (this.state.loggedIn === true) {
-            return <DoctorLayout username={this.state.username} />;
-        }
+            return (
+                <div>
 
-        return (
-            <div>
-
-                <div className="cont" id="loginbg">
-                    <div className="form sign-in" id="loginForm"><br /><br /><br />
-                        <h2>Welcome back,</h2>
-                        <label>
-                            <span>Email</span>
-                            <input id="patientLogin" type="email" />
-                        </label><br />
-                        <label>
-                            <span>Password</span>
-                            <input id="patientLogin" type="password" />
-                        </label><br /><br />
-                        <button type="submit" class="btn btn-danger text-white" onClick="">Sign In</button>
-                        <br /><br />
-                        <button type="submit" class="btn btn-danger text-white" onClick="">Sign Up</button>
-                    </div>
-                    <div className="sub-cont">
-                        <div className="img">
-                            <div className="img__text m--up">
+                    <div className="cont" id="loginbg">
+                        <div className="form sign-in" id="loginForm"><br/><br/><br/>
+                            <h2>Welcome back,</h2>
+                            <label>
+                                <span>Email</span>
+                                <input id="patientLogin" type="email" name="username" onClick={this.handleChange}/>
+                            </label><br/>
+                            <label>
+                                <span>Password</span>
+                                <input id="patientLogin" type="password" name="password" onClick={this.handleChange}/>
+                            </label><br/><br/>
+                            <button type="submit" class="btn btn-danger text-white" onClick="">Sign In</button>
+                            <br/><br/>
+                            <button type="submit" class="btn btn-danger text-white" onClick="">Sign Up</button>
+                        </div>
+                        <div className="sub-cont">
+                            <div className="img">
+                                <div className="img__text m--up">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        );
+            );
+        }
     }
 }
 

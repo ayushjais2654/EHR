@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Redirect} from 'react-router-dom';
 import Home from "../Home";
 import {DOCTOR_REGISTER_API} from "./constants";
 import "../patient/patientRegister.css"
@@ -12,14 +13,24 @@ class DoctorRegister extends Component {
             /*
                 attributed of doctor
              */
-            isRegistered : false
+            isRegistered : false,
+            name : null,
+            email : null,
+            password : null,
+            pinCode : null,
+            street : null,
+            country : null,
+            qualification : null,
+            consultancyFee : 0,
+            currentHospital : null,
+            mobileNumber : 0
         }
     }
 
     render() {
 
         if(this.state.isRegistered === true){
-            return <Home/>;
+            return <Redirect to='/'/>;
         }
         return (
             <div>
@@ -29,16 +40,16 @@ class DoctorRegister extends Component {
                         <div class="main-agileinfo">
                             <div class="agileits-top">
                                 <form onSubmit={this.submitForm} id="patientRegisterForm">
-                                    NAME : <input class="text" type="text" name="username" placeholder="Username" />
-                                    EMAIL : <input class="text" type="email" name="email" placeholder="EMail" />
-                                    PASSWORD : <input class="text" type="password" name="password" placeholder="Password" />
-                                    PIN CODE : <input class="text" type="text" name="pincode" placeholder="PinCode" />
-                                    STREET : <input class="text" type="text" name="street" placeholder="Street" />
-                                    COUNTRY : <input class="text" type="text" name="country" placeholder="Country" />
-                                    QUALIFICATION : <input class="text" type="text" name="bloodGroup" placeholder="blood group" />
-                                    CONSULTANCY FEE : <input class="text" type="text" name="bloodGroup" placeholder="blood group" />
-                                    CURRENT HOSPITAL : <input class="text" type="text" name="bloodGroup" placeholder="blood group" />
-                                    MOBILE NUMBER : <input class="text" type="text" name="mobNo" placeholder="Mobile Number" />
+                                    NAME : <input class="text" type="text" name="name" placeholder="Username" onChange={this.handleChange}/>
+                                    EMAIL : <input class="text" type="email" name="email" placeholder="EMail" onChange={this.handleChange}/>
+                                    PASSWORD : <input class="text" type="password" name="password" placeholder="Password" onChange={this.handleChange}/>
+                                    PIN CODE : <input class="text" type="text" name="pinCode" placeholder="PinCode" onChange={this.handleChange}/>
+                                    STREET : <input class="text" type="text" name="street" placeholder="Street" onChange={this.handleChange}/>
+                                    COUNTRY : <input class="text" type="text" name="country" placeholder="Country" onChange={this.handleChange}/>
+                                    QUALIFICATION : <input class="text" type="text" name="qualification" placeholder="Qualifiaction" onChange={this.handleChange}/>
+                                    CONSULTANCY FEE : <input class="text" type="text" name="consultancyFee" placeholder="Consulatation fees" onChange={this.handleChange}/>
+                                    CURRENT HOSPITAL : <input class="text" type="text" name="currentHospital" placeholder="Hsopital" onChange={this.handleChange}/>
+                                    MOBILE NUMBER : <input class="text" type="text" name="mobileNumber" placeholder="Mobile Number" onChange={this.handleChange}/>
                                     <div class="wthree-text">
                                         <label class="anim">
                                             <input type="checkbox" class="checkbox" />
@@ -86,11 +97,17 @@ class DoctorRegister extends Component {
        /*
             Register in blockchain using api.
         */
-        let response = await axios.post(DOCTOR_REGISTER_API, this.state);
-        alert(response.data);
-        if(response.data === "Candidate is successfully registered .."){
+        let response  = await axios.post(`http://localhost:3001/api/AddNewPatient`, patientDetails).then(null , error => {
+            console.log(error.response.status);
+            if(error.response.status === 500){
+                alert("Patient already registered! Email already exists");
+            }
+        });
+
+        if(response !== undefined) {
+            alert("You are successfully registered");
             this.setState({
-                isRegistered : true
+                isRegistered: true
             });
         }
     }
