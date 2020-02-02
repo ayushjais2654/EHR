@@ -81,19 +81,20 @@ class PatientLogin extends Component {
                 {/*                      onChange={this.handleChange} required/> <br/> <br/>*/}
                 {/*    <input type="submit" value="Submit"/>*/}
                 {/*</form>*/}
-                <div className="cont">
-                    <div className="form sign-in" ><br /><br /><br />  
+                <div className="cont" id="loginbg">
+                    <div className="form sign-in" id="loginForm"><br /><br /><br />  
                         <h2>Welcome back,</h2>
                         <label>
                             <span>Email</span>
                             <input id="patientLogin" type="email"/>
-                        </label>
+                        </label><br/>
                         <label>
                             <span>Password</span>
                             <input id="patientLogin" type="password"/>
-                        </label>
-                        <button type="button" className="submit" onClick="">Sign In</button>
-                        <button type="button" className="submit" onClick="">Sign Up</button>
+                        </label><br/><br/>
+                        <button type="submit" class="btn btn-danger text-white" onClick="">Sign In</button>
+                        <br/><br/>
+                        <button type="submit" class="btn btn-danger text-white" onClick="">Sign Up</button>
                     </div>
                     <div className="sub-cont">
                         <div className="img">

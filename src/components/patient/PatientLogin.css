@@ -4,12 +4,16 @@
     padding: 0;
 }
 
-body {
+#loginbg {
     padding-top: 20px;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     background: #ededed;
+    font-size:15px;
+    margin-top:15px;
+
 }
 #patientLogin {
+    border-top:none;
     margin-top:-15px;
     border-bottom: solid 1px #333;
 }
@@ -313,4 +317,8 @@ input {
 .icon-link--twitter {
     left: auto;
     right: 5px;
+}
+
+#loginForm{
+    text-align:center;
 }
