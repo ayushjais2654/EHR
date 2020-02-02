@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cdcbd23-5bbd-49f2-88c0-f2b752db3ec0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Hospital/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Hospital/hospitalLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Hospital/hospitalRegister.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/patient/PatientLayoutCss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/patient/PatientLogin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/doctor/aboutme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/aboutme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/doctor/doctorRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/doctor/doctorRegister.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/patient/PatientLayoutCss.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/patient/PatientLayoutCss.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/patient/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/patient/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/patient/patientLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/patient/patientLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/patient/patientRegister.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/patient/patientRegister.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +52,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -109,6 +102,7 @@
       <workItem from="1580466310157" duration="5992000" />
       <workItem from="1580547974292" duration="2000000" />
       <workItem from="1580550412016" duration="9377000" />
+      <workItem from="1580612905010" duration="14455000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1580400550933</created>
@@ -149,7 +143,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -162,6 +158,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="patientLogin patientRegister skeleton done" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="590" y="215" width="800" height="684" key="#ESLint" timestamp="1580613588654">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="590" y="215" width="800" height="684" key="#ESLint/70.27.1850.1053@70.27.1850.1053" timestamp="1580613588654" />
     <state x="248" y="27" width="859" height="741" key="CommitChangelistDialog2" timestamp="1580559992433">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -170,22 +170,26 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1580409105556" />
-    <state width="1343" height="172" key="GridCell.Tab.0.bottom" timestamp="1580559796370">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1827" height="275" key="GridCell.Tab.0.bottom" timestamp="1580613253085">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1343" height="172" key="GridCell.Tab.0.bottom/0.27.1366.741@0.27.1366.741" timestamp="1580559796370" />
-    <state width="1343" height="172" key="GridCell.Tab.0.center" timestamp="1580559796369">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1827" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1580613253085" />
+    <state width="1827" height="275" key="GridCell.Tab.0.center" timestamp="1580613253084">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1343" height="172" key="GridCell.Tab.0.center/0.27.1366.741@0.27.1366.741" timestamp="1580559796369" />
-    <state width="1343" height="172" key="GridCell.Tab.0.left" timestamp="1580559796369">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1827" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1580613253084" />
+    <state width="1827" height="275" key="GridCell.Tab.0.left" timestamp="1580613253083">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1343" height="172" key="GridCell.Tab.0.left/0.27.1366.741@0.27.1366.741" timestamp="1580559796369" />
-    <state width="1343" height="172" key="GridCell.Tab.0.right" timestamp="1580559796369">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="1827" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1580613253083" />
+    <state width="1827" height="275" key="GridCell.Tab.0.right" timestamp="1580613253085">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1343" height="172" key="GridCell.Tab.0.right/0.27.1366.741@0.27.1366.741" timestamp="1580559796369" />
+    <state width="1827" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1580613253085" />
     <state x="387" y="114" width="582" height="573" key="MultipleFileMergeDialog" timestamp="1580559702430">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
