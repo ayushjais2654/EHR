@@ -416,6 +416,7 @@ header {
 #homeNav1 {
     position: absolute;
     top: 40%;
+    color:white;
     left: 40%;
     color: wheat;
 }
@@ -436,4 +437,16 @@ header {
     top: 40%;
     left:70%;
     color: wheat;
+}
+
+#homeNav5 {
+    position: absolute;
+    top: 40%;
+    left:10%;
+    color: wheat;
+}
+
+#about{
+    font-size:15px;
+    text-align:justify;
 }
