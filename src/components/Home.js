@@ -7,13 +7,11 @@ import PatientLayout from "./patient";
 class Home extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             tokenDoctor: localStorage.getItem(TOKEN_DOCTOR),
             tokenHospital: localStorage.getItem(TOKEN_HOSPITAL),
             tokenPatient: localStorage.getItem(TOKEN_PATIENT),
-            doctor : false,
-            patient : true,
-            hospital : false
         }
     }
 
@@ -21,9 +19,15 @@ class Home extends Component {
     }
 
     render() {
-        if(this.state.doctor === true){
-            return <DoctorLogin/>;
+        if(this.state.tokenDoctor != null){
+            return <Redirect to='/doctorHome'/>;
         }
+        if(this.state.tokenPatient != null){
+            return <Redirect to='/patientHome'/>;
+        }
+        // if(this.state.hospital === true){
+        //     return <Redirect to='/hospitalHome'/>;
+        // }
         // if(this.state.patient === true){
         //     return <PatientLayout/>;
         // }

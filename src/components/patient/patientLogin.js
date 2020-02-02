@@ -4,6 +4,7 @@ import {TOKEN_PATIENT} from "../globalConstants";
 import PatientLayout from "./index";
 import './PatientLogin.css';
 import "./patientRegister"
+import axios from 'axios';
 
 class PatientLogin extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class PatientLogin extends Component {
         }
 
         this.state = {
-            username: "",
+            username: "jhfsfdfjsfnj",
             password: "",
             loggedIn,
             register: false
@@ -37,12 +38,18 @@ class PatientLogin extends Component {
         };
 
         // Verification of credentials from composer
-
-        if (true) {
-            localStorage.setItem(TOKEN_PATIENT, "hredgjkljggdfr");
-            this.setState({loggedIn: true});
-        } else {
-            alert("Invalid credentials");
+        let response = await axios.get(`http://localhost:3001/api/Patient/${this.state.username}`);
+        if(response === undefined){
+            alert("Invalid Credentials");
+        }
+        else{
+            if(this.state.password === response.data.password){
+                    localStorage.setItem(TOKEN_PATIENT, "hredgjkljggdfr");
+                    this.setState({loggedIn: true});
+                }
+            else {
+                alert("Invalid Credentials");
+            }
         }
     };
 
