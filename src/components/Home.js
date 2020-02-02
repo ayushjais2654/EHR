@@ -48,7 +48,7 @@ class Home extends Component {
                                 </div>
                             </div>
                             <div class="right">
-                                <nav>
+                                <nav id = "homeNav">
                                     <ul>
                                         <li><a href="">Home</a></li>
                                         <li><a href="">Patient</a></li>

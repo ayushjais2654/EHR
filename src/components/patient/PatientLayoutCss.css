@@ -81,50 +81,50 @@ header[role="banner"] .utilities li a {
     content: "";
 }
 
-nav[role="navigation"] {
+#patientIndex[role="navigation"] {
     background: #2a3542;
     color: #ddd;
     /* icons */
 }
 
-nav[role="navigation"] li {
+#patientIndex[role="navigation"] li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-nav[role="navigation"] li a {
+#patientIndex[role="navigation"] li a {
     color: #ddd;
     text-decoration: none;
     display: block;
     padding: 0.7em;
 }
 
-nav[role="navigation"] li a:hover {
+#patientIndex[role="navigation"] li a:hover {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-nav[role="navigation"] li a:before {
+#patientIndex[role="navigation"] li a:before {
     content: "\f248";
     font-family: FontAwesome;
     padding-right: 0.6em;
 }
 
-nav[role="navigation"] .dashboard a:before {
+#patientIndex[role="navigation"] .dashboard a:before {
     content: "";
 }
 
-nav[role="navigation"] .write a:before {
+#patientIndex[role="navigation"] .write a:before {
     content: "";
 }
 
-nav[role="navigation"] .edit a:before {
+#patientIndex[role="navigation"] .edit a:before {
     content: "";
 }
 
-nav[role="navigation"] .comments a:before {
+#patientIndex[role="navigation"] .comments a:before {
     content: "";
 }
 
-nav[role="navigation"] .users a:before {
+#patientIndex[role="navigation"] .users a:before {
     content: "";
 }
 
@@ -406,7 +406,7 @@ td {
         padding: 0.5em 1em;
     }
 
-    nav[role="navigation"] {
+    #patientIndex[role="navigation"] {
         position: fixed;
         width: 200px;
         top: 75px;
@@ -544,5 +544,10 @@ td {
     #appointmentForm{
         padding: 20px;
         margin: 20px;
+    }
+
+    #patient{
+        color: red;
+        text-align: left;
     }
 }

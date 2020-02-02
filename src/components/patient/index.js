@@ -71,9 +71,9 @@ class PatientLayout extends Component {
 
     render(){
 
-        if(this.state.loggedIn === false){
-            return <Redirect to='/'/>;
-        }
+        // if(this.state.loggedIn === false){
+        //     return <Redirect to='/'/>;
+        // }
 
         return (
             <div>
@@ -82,13 +82,13 @@ class PatientLayout extends Component {
                         <h1 id="patient">Patient Panel</h1>
                     </header>
 
-                    <nav role='navigation'>
+                    <nav role='navigation' id = "patientIndex">
                         <ul className="main">
                             <li className="dashboard"><a href="#dashboard">Dashboard</a></li>
                             <br/><br/>
                             <li className="edit"><a href="#table_id">View Reports</a></li>
                             <br/>
-                            <li className="write"><a href="#agendas">View Profile</a></li>
+                            <li className="write"><a href="#appintmentForm">New Appointment</a></li>
                             <br/>
                         </ul>
                     </nav>
@@ -163,11 +163,8 @@ class PatientLayout extends Component {
                         </div>
                     </main>
                 </form>
-            </div>
-          <div>
-                <h1> Hey friend</h1>
                 <Link to="/" onClick={this.signOut}> SignOut </Link>
-          </div>
+            </div>
         );
     }
 }
