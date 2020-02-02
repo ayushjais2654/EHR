@@ -59,7 +59,6 @@ class Home extends Component {
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                     <div class="hero-section">
                         <h1>CHAINCURE</h1>
                         <p>Blockchain solution for storing health records</p>
