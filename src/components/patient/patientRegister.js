@@ -59,7 +59,7 @@ class PatientRegister extends Component {
                         <h1>REGISTER</h1>
                         <div class="main-agileinfo">
                             <div class="agileits-top">
-                                <form onSubmit={this.submitForm}>
+                                <form onSubmit={this.submitForm} id = "patientRegisterForm">
                                     NAME : <input class="text" type="text" name="username" placeholder="Username" />
                                     EMAIL : <input class="text" type="email" name="email" placeholder="EMail" />
                                     PASSWORD : <input class="text" type="password" name="password" placeholder="Password" />
