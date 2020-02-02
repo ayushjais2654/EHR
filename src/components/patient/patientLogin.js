@@ -92,7 +92,8 @@ class PatientLogin extends Component {
                             <span>Password</span>
                             <input id="patientLogin" type="password"/>
                         </label>
-                        <button type="button" className="submit" onClick={this.handleRegister}>Sign In</button>
+                        <button type="button" className="submit" onClick="">Sign In</button>
+                        <button type="button" className="submit" onClick="">Sign Up</button>
                     </div>
                     <div className="sub-cont">
                         <div className="img">
