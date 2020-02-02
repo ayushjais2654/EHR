@@ -47,12 +47,47 @@ class HospitalRegister extends Component {
 
         return (
             <div>
-                <h1> Welcome to Hospital Registration Page .. </h1>
-                <form onSubmit={this.submitForm}>
+                <div id="patientRegister">
+                    <div class="main-w3layouts wrapper">
+                        <h1>REGISTER</h1>
+                        <div class="main-agileinfo">
+                            <div class="agileits-top">
+                                <form onSubmit={this.submitForm} id="patientRegisterForm">
+                                    NAME : <input class="text" type="text" name="username" placeholder="Username" />
+                                    EMAIL : <input class="text" type="email" name="email" placeholder="EMail" />
+                                    PASSWORD : <input class="text" type="password" name="password" placeholder="Password" />
+                                    STREET : <input class="text" type="text" name="street" placeholder="Street" />
+                                    PIN CODE : <input class="text" type="text" name="pincode" placeholder="PinCode" />
+                                    CITY : <input class="text" type="text" name="city" placeholder="City" />
+                                    COUNTRY : <input class="text" type="text" name="country" placeholder="Country" />
+                                    MOBILE NUMBER : <input class="text" type="text" name="mobNo" placeholder="Mobile Number" />
+                                    <div class="wthree-text">
+                                        <label class="anim">
+                                            <input type="checkbox" class="checkbox" />
+                                            <span>I Agree To The Terms & Conditions</span>
+                                        </label>
+                                        <div class="clear"> </div>
+                                    </div>
+                                    <input type="submit" value="REGISTER" />
+                                </form>
+                                <p>Don't have an Account? <a href="/patientLogin"> Login Now!</a></p>
+                            </div>
+                        </div>
+                        <ul class="colorlib-bubbles">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
 
-
-                    <input type="submit" value="Submit"/>
-                </form>
             </div>
         );
     }

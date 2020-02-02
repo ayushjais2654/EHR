@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Home from "../Home";
 import {DOCTOR_REGISTER_API} from "./constants";
-import "../patient/patientRegister.css"
 
 class DoctorRegister extends Component {
 

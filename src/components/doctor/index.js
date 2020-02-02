@@ -3,7 +3,6 @@ import {Container, Row, Col} from 'react-bootstrap';
 import AboutMe from './aboutme';
 import PatientList from './patientList';
 import PatientDetails from './patientDetails';
-import "../patient/PatientLayoutCss.css";
 import "./dashboardStyle.css"
 
 class DoctorLayout extends Component {

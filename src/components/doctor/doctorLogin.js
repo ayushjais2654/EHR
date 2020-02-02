@@ -3,7 +3,6 @@ import axios from 'axios';
 import {DOCTOR_LOGIN_API} from './constants';
 import DoctorLayout from "./index";
 import { TOKEN_DOCTOR } from "../globalConstants";
-import "../patient/PatientLogin.css"
 
 class DoctorLogin extends Component {
 

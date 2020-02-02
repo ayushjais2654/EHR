@@ -7,6 +7,10 @@ import PatientLayout from "./components/patient";
 import PatientRegister from "./components/patient/patientRegister";
 import DoctorLayout from "./components/doctor";
 import DoctorRegister from "./components/doctor/doctorRegister";
+import HospitalLogin from "./components/Hospital/hospitalLogin";
+import HospitalRegister from "./components/Hospital/hospitalRegister";
+import HospitalLayout from "./components/Hospital/index";
+
 import './App.css';
 
 function App() {
@@ -22,9 +26,9 @@ function App() {
           <Route path="/patientHome" exact component={PatientLayout}/>
           <Route path="/patientRegister" exact component={PatientRegister}/>
 
-          {/*<Route path="/hospitalRegister" exact component={HospitalRegister}/>*/}
-          {/*<Route path="/hospitalLogin" exact component={HospitalLogin}/>*/}
-          {/*<Route path="/hospitalLayout" exact component={HospitalLayout}/>*/}
+          <Route path="/hospitalLogin" exact component={HospitalLogin}/>
+              <Route path="/hospitalRegister" exact component={HospitalRegister} />
+              <Route path="/hospitalHome" exact component={HospitalLayout} />
 
       </Router>
     </div>
